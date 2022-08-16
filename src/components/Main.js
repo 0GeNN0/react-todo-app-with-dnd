@@ -22,7 +22,7 @@ function Main() {
       <AddTodo />
       <TodoList />
       {!isTabletOrBigger && <FooterActions styles={footerMobileStyles} />}
-      <p className='dnd'>Drag And Drop To Reorder List</p>
+      <p className='dnd' style={{ color: isDark ? '#cacde8' : '#4d5066' }}>Drag And Drop To Reorder List</p>
     </main>
   );
 }
