@@ -1,0 +1,155 @@
+@import "../base/variables";
+@import "../base/helpers";
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: {
+    inline: 20px;
+    top: 100px;
+  }
+  max-width: 650px;
+  margin: auto;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+
+    h1 {
+      letter-spacing: 20px;
+    }
+
+    span {
+      cursor: pointer;
+    }
+  }
+
+  .add-todo {
+    padding-inline: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    span {
+      @extend %circle;
+      cursor: not-allowed;
+    }
+
+    #add-todo-input {
+      flex-grow: 1;
+      padding-block: 20px;
+      border: none;
+      outline: none;
+      background-color: inherit;
+      color: inherit;
+      font: {
+        size: 18px;
+        family: inherit;
+      }
+    }
+  }
+
+  .main-todo-list {
+    font-size: 18px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    .todo-list {
+      max-height: 600px;
+      overflow: auto;
+
+      .todo-list-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background-color: $lt-v-l-gray;
+        padding: 20px;
+        border-radius: 5px 5px 0 0;
+        border-bottom: 1px solid $lt-l-grayish-blue;
+        cursor: pointer;
+
+        .todo-list-item-checker {
+          @extend %circle;
+          @extend %center;
+          border-width: 1px;
+          border-style: solid;
+        }
+
+        .todo-list-item-del-icon {
+          margin-left: auto;
+          @extend %center;
+        }
+
+        &:hover {
+          color: $dt-v-d-grayish-blue-two;
+        }
+
+        &.dark {
+          background-color: $dt-v-d-desaturated-blue;
+          border-bottom-color: $dt-v-d-grayish-blue;
+
+          &:hover {
+            color: $dt-l-grayish-blue-hover;
+          }
+        }
+      }
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      color: $dt-d-grayish-blue;
+      background-color: inherit;
+
+      & span:not(:first-child):hover {
+        color: $lt-v-d-grayish-blue;
+        cursor: pointer;
+      }
+
+      &.dark span:not(:first-child):hover {
+        color: $dt-l-grayish-blue;
+      }
+    }
+
+    .empty {
+      text-align: center;
+      border-bottom: 1px solid;
+      padding-block: 40px;
+      font-size: 25px;
+    }
+  }
+
+  .actions {
+    color: $dt-v-d-grayish-blue;
+
+    span {
+      padding-right: 15px;
+      cursor: pointer;
+
+      &:hover {
+        color: $dt-v-d-desaturated-blue;
+      }
+
+      &.active {
+        color: $Blue;
+      }
+    }
+
+    &.dark {
+      color: $dt-d-grayish-blue;
+
+      span:hover {
+        color: $dt-l-grayish-blue;
+      }
+    }
+  }
+
+  .dnd {
+    align-self: center;
+    padding-bottom: 20px;
+  }
+}
