@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-todo-app-with-dnd/static/css/main.162d08ec.css",
+    "main.js": "/react-todo-app-with-dnd/static/js/main.bb51e806.js",
+    "index.html": "/react-todo-app-with-dnd/index.html",
+    "main.162d08ec.css.map": "/react-todo-app-with-dnd/static/css/main.162d08ec.css.map",
+    "main.bb51e806.js.map": "/react-todo-app-with-dnd/static/js/main.bb51e806.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.162d08ec.css",
+    "static/js/main.bb51e806.js"
+  ]
+}
